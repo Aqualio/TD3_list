@@ -1,0 +1,82 @@
+[
+  {
+  "Name": "Altmer (High Elf)",
+  "Localisation": "Summerset Isles",
+  "Best starting skill": "Illusion",
+  "Unique power": "Highborn",
+  "Power description": "Regenerate 25% of the character's maximum magicka per second for 60 seconds.",
+  "Racial Effect": "+50 Magicka"
+  },
+  {
+    "Name": "Argonian",
+    "Localisation": "Blackmarsh",
+    "Best starting skill": "Lockpicking",
+    "Unique power": "Histskin",
+    "Power description": "Regenerate health 10 times faster for 60 seconds.",
+    "Racial Effect": "50% Disease Resistance, Waterbreathing"
+  },
+  {
+    "Name": "Bosmer (Wood Elf)",
+    "Localisation": "Valenwood",
+    "Best starting skill": "Archery",
+    "Unique power": "Command Animal",
+    "Power description": "Make all surrounding animals your allies for 60 seconds.",
+    "Racial Effect": "50% Disease Resistance, 50% Poison Resistance"
+  },
+  {
+    "Name": "Breton",
+    "Localisation": "High Rock",
+    "Best starting skill": "Conjuration",
+    "Unique power": "Dragonskin",
+    "Power description": "Absorb 50% of magicka from all incoming spells for 60 seconds.",
+    "Racial Effect": "25% Magic Resistance"
+  },
+  {
+    "Name": "Dunmer (Dark Elf)",
+    "Localisation": "Morrowind",
+    "Best starting skill": "Destruction",
+    "Unique power": "Ancestor's Wrath",
+    "Power description": "Surrounds the character in fire for 60 seconds.",
+    "Racial Effect": "50% Fire Resistance"
+  },
+  {
+    "Name": "Imperial",
+    "Localisation": "Cyrodiil",
+    "Best starting skill": "Restoration",
+    "Unique power": "Voice of the Emperor",
+    "Power description": "Nearby people are Calmed for 30 seconds.",
+    "Racial Effect": "Find more gold than usual"
+  },
+  {
+    "Name": "Khajiit",
+    "Localisation": "Elsweyr",
+    "Best starting skill": "Sneak",
+    "Unique power": "Night Eye",
+    "Power description": "Improved Night Vision for 60 seconds (can be toggled multiple times per day).",
+    "Racial Effect": "15 Base Unarmed Damage"
+  },
+  {
+    "Name": "Nord",
+    "Localisation": "Skyrim",
+    "Best starting skill": "Two-Handed",
+    "Unique power": "Battlecry",
+    "Power description": "Nearby enemies are Frightened for 30 seconds.",
+    "Racial Effect": "50% Frost Resistance"
+  },
+  {
+    "Name": "Orsimer (Orc)",
+    "Localisation": "High Rock and Orsinium",
+    "Best starting skill": "Heavy Armor",
+    "Unique power": "Berserker Rage",
+    "Power description": "Take half damage and do double physical damage for 60 seconds.",
+    "Racial Effect": "Are allowed to enter Orc mining camps and strongholds without first becoming Blood-kin."
+  },
+  {
+    "Name": "Redguard",
+    "Localisation": "Hammerfell",
+    "Best starting skill": "One-Handed",
+    "Unique power": "Adrenaline Rush",
+    "Power description": "Regenerate stamina 10 times faster for 60 seconds. ",
+    "Racial Effect": "50% Poison Resistance"
+  }
+]
