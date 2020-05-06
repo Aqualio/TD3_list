@@ -1,4 +1,6 @@
-[
+{
+  "Liste":
+  [
   {
   "Name": "Altmer (High Elf)",
   "Localisation": "Summerset Isles",
@@ -80,3 +82,4 @@
     "Racial Effect": "50% Poison Resistance"
   }
 ]
+}
