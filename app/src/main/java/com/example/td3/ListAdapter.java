@@ -11,21 +11,31 @@ import java.util.List;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     private List<Skyrimraces> values;
+    private OnListListener mOnListListener;
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
     // you provide access to all the views for a data item in a view holder
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         // each data item is just a string in this case
         public TextView txtHeader;
         public TextView txtFooter;
         public View layout;
+        OnListListener OnListListener;
 
-        public ViewHolder(View v) {
+        public ViewHolder(View v, OnListListener OnListListener) {
             super(v);
             layout = v;
             txtHeader = (TextView) v.findViewById(R.id.firstLine);
             txtFooter = (TextView) v.findViewById(R.id.secondLine);
+            this.OnListListener = OnListListener;
+
+            v.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            OnListListener.onListClick(getAdapterPosition());
         }
     }
 
@@ -40,8 +50,9 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public ListAdapter(List<Skyrimraces> myDataset) {
+    public ListAdapter(List<Skyrimraces> myDataset, OnListListener OnListListener) {
         values = myDataset;
+        this.mOnListListener = OnListListener;
     }
 
     // Create new views (invoked by the layout manager)
@@ -54,7 +65,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         View v =
                 inflater.inflate(R.layout.row_layout, parent, false);
         // set the view's size, margins, paddings and layout parameters
-        ViewHolder vh = new ViewHolder(v);
+        ViewHolder vh = new ViewHolder(v, mOnListListener);
         return vh;
     }
 
@@ -71,6 +82,10 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     @Override
     public int getItemCount() {
         return values.size();
+    }
+
+    public interface OnListListener{
+        void onListClick(int position);
     }
 
 }
