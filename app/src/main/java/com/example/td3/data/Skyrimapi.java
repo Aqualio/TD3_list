@@ -1,8 +1,9 @@
-package com.example.td3;
+package com.example.td3.data;
+
+import com.example.td3.presentation.model.RestSkyrimResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
-import retrofit2.http.Query;
 
 public interface Skyrimapi {
 

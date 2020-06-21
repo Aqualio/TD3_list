@@ -1,4 +1,4 @@
-package com.example.td3;
+package com.example.td3.presentation.view;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -6,6 +6,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.td3.R;
+import com.example.td3.presentation.model.Skyrimraces;
 
 import java.util.List;
 
@@ -23,21 +26,21 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         public View layout;
         OnListListener OnListListener;
 
-        public ViewHolder(View v, OnListListener OnListListener) {
-            super(v);
-            layout = v;
-            txtHeader = (TextView) v.findViewById(R.id.firstLine);
-           // txtFooter = (TextView) v.findViewById(R.id.secondLine);
-            this.OnListListener = OnListListener;
+    public ViewHolder(View v, OnListListener OnListListener) {
+        super(v);
+        layout = v;
+        txtHeader = (TextView) v.findViewById(R.id.firstLine);
+        // txtFooter = (TextView) v.findViewById(R.id.secondLine);
+        this.OnListListener = OnListListener;
 
-            v.setOnClickListener(this);
-        }
-
-        @Override
-        public void onClick(View v) {
-            OnListListener.onListClick(getAdapterPosition());
-        }
+        v.setOnClickListener(this);
     }
+
+    @Override
+    public void onClick(View v) {
+        OnListListener.onListClick(getAdapterPosition());
+    }
+}
 
     public void add(int position, Skyrimraces item) {
         values.add(position, item);

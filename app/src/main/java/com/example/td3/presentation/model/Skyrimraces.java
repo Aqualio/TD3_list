@@ -1,4 +1,4 @@
-package com.example.td3;
+package com.example.td3.presentation.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
