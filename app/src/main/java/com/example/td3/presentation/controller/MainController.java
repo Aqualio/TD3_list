@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.widget.Toast;
 
 import com.example.td3.Constants;
+import com.example.td3.Injection;
 import com.example.td3.data.Skyrimapi;
 import com.example.td3.presentation.model.RestSkyrimResponse;
 import com.example.td3.presentation.model.Skyrimraces;
@@ -76,14 +77,7 @@ public class MainController {
     }
     private void makeapiCall(){
 
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(Constants.BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create(gson))
-                .build();
-
-        Skyrimapi skyrimapi = retrofit.create(Skyrimapi.class);
-
-        Call<RestSkyrimResponse> call = skyrimapi.getSkyrimResponse();
+        Call<RestSkyrimResponse> call = Injection.getSkyrimapi().getSkyrimResponse();
         call.enqueue(new Callback<RestSkyrimResponse>() {
             @Override
             public void onResponse(Call<RestSkyrimResponse> call, Response<RestSkyrimResponse> response) {

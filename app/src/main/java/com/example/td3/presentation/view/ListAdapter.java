@@ -26,21 +26,21 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         public View layout;
         OnListListener OnListListener;
 
-        public ViewHolder(View v, OnListListener OnListListener) {
-            super(v);
-            layout = v;
-            txtHeader = (TextView) v.findViewById(R.id.firstLine);
-           // txtFooter = (TextView) v.findViewById(R.id.secondLine);
-            this.OnListListener = OnListListener;
+    public ViewHolder(View v, OnListListener OnListListener) {
+        super(v);
+        layout = v;
+        txtHeader = (TextView) v.findViewById(R.id.firstLine);
+        // txtFooter = (TextView) v.findViewById(R.id.secondLine);
+        this.OnListListener = OnListListener;
 
-            v.setOnClickListener(this);
-        }
-
-        @Override
-        public void onClick(View v) {
-            OnListListener.onListClick(getAdapterPosition());
-        }
+        v.setOnClickListener(this);
     }
+
+    @Override
+    public void onClick(View v) {
+        OnListListener.onListClick(getAdapterPosition());
+    }
+}
 
     public void add(int position, Skyrimraces item) {
         values.add(position, item);

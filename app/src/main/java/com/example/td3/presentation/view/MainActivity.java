@@ -13,6 +13,7 @@ import android.view.MenuInflater;
 import android.widget.Toast;
 
 import com.example.td3.Constants;
+import com.example.td3.Injection;
 import com.example.td3.R;
 import com.example.td3.data.Skyrimapi;
 import com.example.td3.presentation.controller.MainController;
@@ -50,11 +51,9 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.OnLis
 
         controller = new MainController(
                 this,
-                new GsonBuilder()
-                        .setLenient()
-                        .create(),
+                Injection.getGson(),
 
-                getSharedPreferences("Project_mobile_prog", Context.MODE_PRIVATE)
+                Injection.getSharedPreferences(getApplicationContext())
         );
         controller.onStart();
 
