@@ -27,7 +27,8 @@ https://github.com/BilboBaguette/ProjAndroid3A.git
       - Principes(SOLID, KISS, DRY)
    - Gitflow
    - Autres fonctionnalités
-      -
+      - Du sound lorsque l'application est lancée
+      - Du sound quand le boutton en haut à droite est appuyé 
 
 ## Fonctionnalités:
 
