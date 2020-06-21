@@ -1,4 +1,4 @@
-package com.example.td3;
+package com.example.td3.presentation.view;
 
 import android.os.Bundle;
 import android.text.SpannableString;
@@ -6,6 +6,9 @@ import android.text.style.RelativeSizeSpan;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.td3.R;
+import com.example.td3.presentation.model.Skyrimraces;
 
 public class ListActivity extends AppCompatActivity {
 
