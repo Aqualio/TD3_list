@@ -7,9 +7,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.td3.Constants;
@@ -58,6 +62,15 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.OnLis
         controller.onStart();
 
 
+
+   /*     Button bruhtton = (Button) findViewById(R.id.button);
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.bruh);
+        bruhtton.setOnClickListener(new View.OnClickListener(){
+
+            public void onClick(View v) {
+                mp.start();
+            }
+        });*/
     }
 
 
@@ -66,8 +79,17 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.OnLis
     public boolean onCreateOptionsMenu(Menu menu) { //creates action menu
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.my_menu, menu);
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.skyrim);
+        mp.start();
 
         return super.onCreateOptionsMenu(menu);
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.bruh);
+        mp.start();
+
+        return true;
+
     }
 
 
