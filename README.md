@@ -26,7 +26,7 @@ https://github.com/BilboBaguette/ProjAndroid3A.git
       - MVC
       - Principes(SOLID, KISS, DRY)
    - Gitflow
-   - Autres fonctionnalités:
+   - Autres fonctionnalités
       -
 
 ## Fonctionnalités:
