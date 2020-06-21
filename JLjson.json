@@ -1,8 +1,5 @@
-{
-  "List":
-  [
 
-    {
+   {
       "name":"Your name.",
       "ImgUrl":"https://www.nautiljon.com/images/anime/00/97/mini/kimi_no_na_wa_5079.jpg?11591017193"	
       "Year_of_release":"2016",
@@ -171,6 +168,3 @@
       "Score": "6.63"
 
     }
-
-  ]
-}
