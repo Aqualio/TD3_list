@@ -2,5 +2,9 @@
     <string name="app_name">TD3</string>
     <string name="example_application">Example application</string>
     <string name="localisation">World Localisation: %s</string>
+    <string name="start_skill">Highest skill at level 1: %s</string>
+    <string name="power_name">Racial power name: %s</string>
+    <string name="power_description">Racial power description: %s</string>
+    <string name="racial_effect">Racial Bonus: %s</string>
 
 </resources>

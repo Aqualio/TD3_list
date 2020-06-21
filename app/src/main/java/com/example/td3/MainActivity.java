@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.OnLis
         }else {
             makeapiCall();
         }
-        //showList();
+        //showList();*/
         arrayskyrimraces = getArrayDataFromCache();
        /* if(arrayskyrimraces == null){
             makeapiCall();
