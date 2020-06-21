@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.OnLis
     private RecyclerView.LayoutManager layoutManager;
     private SharedPreferences sharedPreferences;
     private Gson gson;
-    private ArrayList<Skyrimraces> arrayskyrimraces;
+    private ArrayList<Skyrimraces> arrayskyrimraces = new ArrayList<Skyrimraces>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +47,9 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.OnLis
                 .setLenient()
                 .create();
 
-        List<Skyrimraces> skyrimraces = getDataFromCache();
+        makeapiCall();
+
+        /*List<Skyrimraces> skyrimraces = getDataFromCache();
         if(skyrimraces != null){
             showList(skyrimraces);
         }else {
@@ -55,25 +57,25 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.OnLis
         }
         //showList();
         arrayskyrimraces = getArrayDataFromCache();
-        if(arrayskyrimraces == null){
+       /* if(arrayskyrimraces == null){
             makeapiCall();
-        }
+        }*/
 
     }
 
     private List<Skyrimraces> getDataFromCache() {
 
-        String jsonSkyrim = sharedPreferences.getString(Constants.KEY_SKYRIM_LIST, null);
+        String jsonSkyrim = sharedPreferences.getString("jsonSkyrimList",null);
 
         if(jsonSkyrim == null) {return null;}
         else {
-            Type listType = new TypeToken<List<Skyrimraces>>() {}.getType();
+            Type listType = new TypeToken<List<Skyrimraces>>(){}.getType();
             return gson.fromJson(jsonSkyrim, listType);
         }
     }
 
     private ArrayList<Skyrimraces> getArrayDataFromCache(){
-        String jsonSkyrim = sharedPreferences.getString(Constants.KEY_SKYRIM_LIST, null);
+        String jsonSkyrim = sharedPreferences.getString("jsonSkyrimList", null);
 
         if(jsonSkyrim == null) {return null;}
         else {
@@ -102,9 +104,6 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.OnLis
     }
 
     private void makeapiCall(){
-        Gson gson = new GsonBuilder()
-                .setLenient()
-                .create();
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
@@ -141,7 +140,7 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.OnLis
         sharedPreferences
                 .edit()
                // .putInt("cle_integer", 3)
-                .putString(Constants.KEY_SKYRIM_LIST, "jsonString")
+                .putString(Constants.KEY_SKYRIM_LIST, jsonString)
                 .apply();
         Toast.makeText(getApplicationContext(), "List saved", Toast.LENGTH_SHORT).show();
 
@@ -155,7 +154,7 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.OnLis
     public void onListClick(int position) {
         //Log.d(TAG, "onListClick: clicked.");
         Intent intent = new Intent(this, ListActivity.class);
-        intent.putExtra("list_object", (Parcelable) arrayskyrimraces.get(position));
+        intent.putExtra("list_object", arrayskyrimraces.get(position));
         startActivity(intent);
     }
 }

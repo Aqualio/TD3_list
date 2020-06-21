@@ -27,7 +27,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
             super(v);
             layout = v;
             txtHeader = (TextView) v.findViewById(R.id.firstLine);
-            txtFooter = (TextView) v.findViewById(R.id.secondLine);
+           // txtFooter = (TextView) v.findViewById(R.id.secondLine);
             this.OnListListener = OnListListener;
 
             v.setOnClickListener(this);
@@ -51,7 +51,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
     // Provide a suitable constructor (depends on the kind of dataset)
     public ListAdapter(List<Skyrimraces> myDataset, OnListListener OnListListener) {
-        values = myDataset;
+        this.values = myDataset;
         this.mOnListListener = OnListListener;
     }
 
@@ -76,6 +76,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         // - replace the contents of the view with that element
         final Skyrimraces CurrentRace = values.get(position);
         holder.txtHeader.setText(CurrentRace.getName());
+
     }
 
     // Return the size of your dataset (invoked by the layout manager)

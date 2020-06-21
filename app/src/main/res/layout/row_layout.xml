@@ -4,7 +4,7 @@
     android:layout_height="?android:attr/listPreferredItemHeight"
     android:padding="6dip" >
 
-    <TextView
+ <!--   <TextView
         android:id="@+id/secondLine"
         android:layout_width="fill_parent"
         android:layout_height="26dip"
@@ -13,18 +13,21 @@
         android:ellipsize="marquee"
         android:text="Description"
         android:textSize="12sp"
-        android:singleLine="true" />
+        android:singleLine="true" />-->
 
     <TextView
         android:id="@+id/firstLine"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/secondLine"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
         android:layout_alignWithParentIfMissing="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="37dp"
         android:gravity="center_vertical"
         android:text="Example application"
         android:textSize="16sp" />
+    <!--  android:layout_above="@id/secondLine"-->
 
 </RelativeLayout>
