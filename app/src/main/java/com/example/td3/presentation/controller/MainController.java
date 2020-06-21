@@ -2,10 +2,13 @@ package com.example.td3.presentation.controller;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.td3.Constants;
 import com.example.td3.Injection;
+import com.example.td3.R;
 import com.example.td3.data.Skyrimapi;
 import com.example.td3.presentation.model.RestSkyrimResponse;
 import com.example.td3.presentation.model.Skyrimraces;
@@ -47,11 +50,11 @@ public class MainController {
         }else {
             makeapiCall();
         }
-        //showList();*/
+        //*/
         view.arrayskyrimraces = getArrayDataFromCache();
-       /* if(arrayskyrimraces == null){
-            makeapiCall();
-        }*/
+
+
+
     }
 
     private List<Skyrimraces> getDataFromCache() {
@@ -110,9 +113,6 @@ public class MainController {
         Toast.makeText(view.getApplicationContext(), "List saved", Toast.LENGTH_SHORT).show();
 
     }
-    public void onItemClick(Skyrimraces skyrimraces){
 
-
-    }
 
 }
